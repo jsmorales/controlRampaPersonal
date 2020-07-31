@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contentRampaMain"
+    tools:context=".Fragments.ConsultaRampaFragment">
+
+    <ProgressBar
+        android:id="@+id/consulta_progress_rampa"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150sp"
+        android:layout_marginTop="158dp"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20sp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/consultaForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Switch
+                    android:id="@+id/switchInputValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:hint="Entrada"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleFlightsTextView"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:text="Vuelo" />
+
+                    <TextView
+                        android:id="@+id/valueFlightsTextView"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:textStyle=""
+                        android:text="Seleccione un Vuelo..." />
+
+                    <Button
+                        android:id="@+id/buttonSelectFlight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_info"
+                        android:padding="5sp"
+                        android:textColor="@color/backgroudLight"
+                        android:text="Seleccionar Vuelo"/>
+
+
+                    <RadioGroup
+                        android:id="@+id/rdgGroupItinerary"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_span="3">
+                        <RadioButton
+                            android:id="@+id/rdbComplete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Redondo"/>
+                        <RadioButton
+                            android:id="@+id/rdbArriving"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Llegando"/>
+                        <RadioButton
+                            android:id="@+id/rdbDeparture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Saliendo"/>
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titlePositionTextView"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:text="Posición" />
+
+                    <TextView
+                        android:id="@+id/valuePositionTextView"
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textSize="18dp"
+                        android:textStyle=""
+                        android:text="Seleccione una Posiciòn..." />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:padding="8dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonSelectPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_info"
+                            android:padding="5sp"
+                            android:textColor="@color/backgroudLight"
+                            android:text="Seleccionar Posiciòn"/>
+
+                        <Button
+                            android:id="@+id/buttonGetPositionList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_info"
+                            android:padding="5sp"
+                            android:layout_marginLeft="15sp"
+                            android:textColor="@color/backgroudLight"
+                            android:visibility="gone"
+                            android:text="Ver Lista Agentes"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputSocialLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="Número de Cédula">
+
+                    <EditText
+                        android:id="@+id/socialNumberTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/consultaButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0sp"
+                    android:background="@drawable/button_generic"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:text="Ingresar" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
